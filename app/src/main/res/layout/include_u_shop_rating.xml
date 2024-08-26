@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shop_Rating_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/rect_border_grey"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/totalrating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dip"
+                    android:fontFamily="@font/moderat_bold"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="@dimen/_7sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="5.0"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/large"
+                    app:drawableEndCompat="@drawable/white_star"
+                    app:drawableTint="@color/btnOrange" />
+
+                <TextView
+                    android:id="@+id/reviewtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/moderat_bold"
+                    android:gravity="center"
+                    android:text="Excellent \n 4 Reviews"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="5*"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/pb5"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:max="5"
+                        android:progress="0"
+                        app:indicatorColor="@color/dark_green"
+                        app:trackColor="@color/white"
+                        app:trackCornerRadius="@dimen/_50sdp"
+                        app:trackThickness="@dimen/_7sdp" />
+
+                    <TextView
+                        android:id="@+id/pd5_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="0.0"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="4*"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/pb4"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:max="5"
+                        android:progress="0"
+                        app:indicatorColor="@color/dark_green"
+                        app:trackColor="@color/white"
+                        app:trackCornerRadius="@dimen/_50sdp"
+                        app:trackThickness="@dimen/_7sdp" />
+
+                    <TextView
+                        android:id="@+id/pb4_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="0.0"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="3*"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/pb3"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="0.8"
+                        android:max="5"
+                        android:progress="0"
+                        app:indicatorColor="@color/dark_green"
+                        app:trackColor="@color/white"
+                        app:trackCornerRadius="@dimen/_50sdp"
+                        app:trackThickness="@dimen/_7sdp" />
+
+                    <TextView
+                        android:id="@+id/pb3_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="0.0"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="2*"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/pb2"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:max="5"
+                        android:progress="0"
+                        app:indicatorColor="@color/dark_green"
+                        app:trackColor="@color/white"
+                        app:trackCornerRadius="@dimen/_50sdp"
+                        app:trackThickness="@dimen/_7sdp" />
+
+                    <TextView
+                        android:id="@+id/pb2_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="0.0"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:orientation="horizontal"
+                    tools:ignore="NestedWeights">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="1*"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints,NestedWeights" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/pb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:max="5"
+                        android:progress="0"
+                        app:indicatorColor="@color/dark_green"
+                        app:trackColor="@color/white"
+                        app:trackCornerRadius="@dimen/_50sdp"
+                        app:trackThickness="@dimen/_7sdp" />
+
+                    <TextView
+                        android:id="@+id/pb1_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/moderat_medium"
+                        android:text="0.0"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/small"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <include
+                android:id="@+id/s"
+                layout="@layout/include_shop_detail_pb_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/d"
+                layout="@layout/include_shop_detail_pb_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/q"
+                layout="@layout/include_shop_detail_pb_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/p"
+                layout="@layout/include_shop_detail_pb_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--header-->
+        <include
+            android:id="@+id/profile"
+            layout="@layout/include_u_setting_header" />
+
+
+       <com.google.android.material.button.MaterialButton
+               android:id="@+id/setting_addshop"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="16dp"
+               android:background="@drawable/gradient_login_background"
+               android:fontFamily="@font/moderat_medium"
+               android:gravity="center"
+               android:text="Add a Shop"
+           android:visibility="gone"
+               android:textAllCaps="false"
+               android:textColor="@color/white"
+               app:backgroundTint="@null"
+               app:icon="@drawable/store"
+               app:iconGravity="textStart"
+               app:iconPadding="5dp"
+               app:iconTint="@color/white"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_7sdp">
+            <!--notification-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_notification"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/notifications_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/notification"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/notification_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:checked="true"
+                    android:thumb="@drawable/custom_thumb"
+                    app:showText="true"
+                    app:switchTextAppearance="@style/SwitchText"
+                    app:track="@drawable/custom_track" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line1"
+                layout="@layout/include_horizontal_view" />
+
+            <!--Manage address-->
+            <LinearLayout
+                android:id="@+id/manage_address_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_address"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/location_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/manage_address"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_address_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_horizontal_view" />
+
+            <!--Accesss permission-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_access_permission"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/outline_visibility"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/access_permission"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_access_permission_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:checked="true"
+                    android:thumb="@drawable/custom_thumb"
+                    app:showText="true"
+                    app:switchTextAppearance="@style/SwitchText"
+                    app:track="@drawable/custom_track" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_horizontal_view" />
+            <!--About us-->
+            <LinearLayout
+                android:id="@+id/aboutus_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_aboutus"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/info_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/about_us"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_aboutus_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+            <!--language-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/language_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+
+                    android:id="@+id/setting_langauge"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/public_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/language"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_langauge_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_horizontal_view" />
+
+            <!--country-->
+            <LinearLayout
+                android:id="@+id/country_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_country"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/flag_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/country"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_country_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_horizontal_view" />
+            <!--Help support-->
+            <LinearLayout
+                android:id="@+id/help_support_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_support"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/headset_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/help_and_support"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_support_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_horizontal_view" />
+            <!--logout-->
+            <LinearLayout
+                android:id="@+id/logout_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_logout"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/logout_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/logout"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_logout_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+
+            <include layout="@layout/include_horizontal_view" />
+            <!--FAQ-->
+            <LinearLayout
+                android:id="@+id/faq_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_faq"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/contact_support_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/faq"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_faq_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_horizontal_view" />
+            <!--privacy policy-->
+            <LinearLayout
+                android:id="@+id/privacy_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/setting_privacy_policy"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/privacy_outline"
+                    app:tint="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/privacy_policy"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/setting_pp_click"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/navigate_next"
+                    app:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

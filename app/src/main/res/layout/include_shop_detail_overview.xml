@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/shop_overview_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/moderat_bold"
+            android:gravity="center"
+            android:text="@string/overview"
+            android:textColor="@color/appDark"
+            android:textSize="@dimen/medium"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/moderat_regular"
+            android:textAlignment="viewStart"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/small"
+            app:layout_constraintTop_toBottomOf="@+id/shop_overview_header" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shop_service_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/shop_overview_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/moderat_bold"
+            android:text="@string/service"
+            android:textAlignment="viewStart"
+            android:textColor="@color/appDark"
+            android:textSize="@dimen/medium"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/service_header1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawablePadding="2dip"
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="start|center_vertical"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small"
+                app:drawableStartCompat="@drawable/check_circle_outline"
+                app:drawableTint="@color/appDark" />
+
+            <TextView
+                android:id="@+id/service_header2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_weight="0.5"
+                android:drawablePadding="2dip"
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="start|center_vertical"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small"
+                app:drawableStartCompat="@drawable/check_circle_outline"
+                app:drawableTint="@color/appDark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/service_header3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawablePadding="2dip"
+
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="start|center_vertical"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small"
+                app:drawableStartCompat="@drawable/check_circle_outline"
+                app:drawableTint="@color/appDark" />
+
+            <TextView
+                android:id="@+id/service_header4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawablePadding="2dip"
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="start|center_vertical"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small"
+                app:drawableStartCompat="@drawable/check_circle_outline"
+                app:drawableTint="@color/appDark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Rating_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/shop_service_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/moderat_bold"
+            android:gravity="center"
+            android:text="@string/rating"
+            android:textColor="@color/appDark"
+            android:textSize="@dimen/medium"
+            tools:ignore="MissingConstraints" />
+
+
+        <include
+            android:id="@+id/rating"
+            layout="@layout/include_u_shop_rating" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

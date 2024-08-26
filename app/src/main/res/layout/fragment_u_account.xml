@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/account_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/pic"
+                    app:civ_border_color="@color/transparnet"
+                    app:civ_border_width="1dp"
+
+                    tools:ignore="MissingConstraints" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/account_edit_profile"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:backgroundTint="@color/appDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="50dp"
+                    app:icon="@drawable/edit"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="15dp"
+                    app:iconTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:rippleColor="@color/light_grey"
+                    tools:ignore="MissingConstraints" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center">
+
+
+            </LinearLayout>
+
+            <!--name-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="@string/name"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rect_border_grey"
+                android:fontFamily="@font/moderat_regular"
+                android:maxLength="100"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <!--email-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="@string/email"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shopeadd_shopname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_disabled"
+                android:fontFamily="@font/moderat_regular"
+                android:editable="false"
+                android:enabled="false"
+                android:maxLength="100"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="@string/phone"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/shopeadd_ccp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_disabled"
+                    android:editable="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:padding="@dimen/_3sdp"
+                    app:ccp_clickable="false"
+                    app:ccp_arrowSize="@dimen/_12sdp"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_autoFormatNumber="true"
+                    app:ccp_contentColor="?android:textColorPrimary"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_textGravity="LEFT"
+                    app:ccp_textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/shopeadd_phoneedt"
+                    app:layout_constraintHorizontal_weight="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/shopeadd_phoneedt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:background="@drawable/edit_disabled"
+                    android:fontFamily="@font/moderat_regular"
+                    android:inputType="number"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:text="+1246325321"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/shopeadd_ccp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/shopeadd_changePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_bold"
+                android:gravity="start|center"
+                android:text="@string/change_password"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+
+            <include
+                android:id="@+id/save"
+                layout="@layout/include_common_btn" />
+
+            <include
+                android:id="@+id/cancel"
+                layout="@layout/include_cancel_btn" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

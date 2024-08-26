@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/seller_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+    <item
+        android:id="@+id/seller_rfq"
+        android:icon="@drawable/ic_vector_smart_object_1"
+        android:title="RFQ" />
+    <item
+        android:id="@+id/seller_my_orders"
+        android:icon="@drawable/myorder"
+        android:title="My orders" />
+
+    <item
+        android:id="@+id/seller_chat"
+        android:icon="@drawable/chat"
+        android:title="Chats" />
+
+    <item
+        android:id="@+id/seller_setting"
+        android:icon="@drawable/settings"
+        android:title="Setting" />
+</menu>

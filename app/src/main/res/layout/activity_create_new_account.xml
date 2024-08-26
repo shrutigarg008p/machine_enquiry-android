@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/gradient_login_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/include_top_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvAccessToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:fontFamily="@font/moderat_medium"
+            android:gravity="center"
+            android:text="@string/new_account_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_regular"
+            android:text="UserType"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layuserType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.machine.machine.commonBase.EditSpinner
+                android:id="@+id/edt_userType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_text_border"
+                android:editable="false"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="Please select userType"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="MissingConstraints" />
+
+
+            <ImageView
+
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:alpha=".8"
+                android:contentDescription="TODO"
+                android:fontFamily="@font/moderat_regular"
+
+                android:padding="5dp"
+                android:src="@drawable/dropdown_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/layuserType"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="OnClick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_regular"
+            android:text="@string/email_phone_number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/moderat_regular"
+            android:maxLength="100"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_12ssp" />
+
+        <include
+            android:id="@+id/account"
+            layout="@layout/include_common_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_medium"
+            android:text="@string/send_confirmation_code_desc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

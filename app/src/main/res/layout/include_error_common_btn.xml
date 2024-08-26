@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/child_parent_ll_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp">
+
+    <ImageView
+        android:id="@+id/child_parent_ll_error_img"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/nowifi" />
+
+    <TextView
+        android:id="@+id/child_parent_ll_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/moderat_black"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium" />
+
+    <TextView
+        android:id="@+id/child_parent_ll_error_text_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/moderat_medium"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:textSize="@dimen/small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/child_parent_ll_error_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/btnOrange"
+            android:fontFamily="@font/moderat_bold"
+            android:text="@string/try_again"
+            android:textAllCaps="false"
+            android:textSize="@dimen/small"
+            android:visibility="gone"
+            app:cornerRadius="@dimen/_6sdp" />
+
+        <!-- <include layout="@layout/include_progessbar" />-->
+
+    </RelativeLayout>
+</LinearLayout>
+
+

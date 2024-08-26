@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp"
+    android:weightSum="1">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/errorDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/moderat_bold"
+        android:gravity="center"
+        android:text="No default Address Found"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/medium"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/common_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="0.1"
+        android:backgroundTint="@color/btnTeal"
+        android:fontFamily="@font/moderat_bold"
+        android:text="@string/add_address"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium"
+        android:visibility="visible"
+        app:cornerRadius="@dimen/_6sdp" />
+
+
+</LinearLayout>

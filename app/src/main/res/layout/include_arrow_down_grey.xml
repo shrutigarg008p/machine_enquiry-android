@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_24sdp"
+    android:layout_height="@dimen/_24sdp"
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"
+    android:layout_marginEnd="8dp"
+    android:alpha=".8"
+    android:contentDescription="TODO"
+    android:fontFamily="@font/moderat_regular"
+    android:padding="5dp"
+    android:src="@drawable/dropdown_icon" />

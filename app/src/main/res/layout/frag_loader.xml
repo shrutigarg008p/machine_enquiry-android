@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackground">
+    <!--view -->
+    <LinearLayout
+        android:id="@+id/child_parent_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:windowBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="visible" />
+    <!--error -->
+    <include layout="@layout/include_error_common_btn" />
+    <!--progress bar-->
+    <RelativeLayout
+        android:id="@+id/child_parent_ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="?android:windowBackground"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <include layout="@layout/include_progessbar" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

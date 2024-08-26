@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/common_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_medium"
+            android:text="@string/location_information"
+            android:textAlignment="viewStart"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/large" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:fontFamily="@font/moderat_bold"
+                    android:text="AI Mankhool 4"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="dubai"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_weight="0.3"
+
+                android:background="@color/grey" />
+        </LinearLayout>
+
+        <include layout="@layout/include_horizontal_view" />
+        <!--FIRST NAME-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_medium"
+            android:text="@string/additional_address_details"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/medium" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/additionalDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/rect_border_grey"
+            android:fontFamily="@font/moderat_regular"
+            android:hint="@string/where_do_you_want_us_to_drop_the_package"
+            android:maxLength="100"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/small" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/moderat_medium"
+            android:text="@string/personal_information"
+            android:textAlignment="viewStart"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/moderat_regular"
+            android:text="@string/phone"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/medium" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/shopeadd_ccp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_border_grey"
+                android:padding="@dimen/_3sdp"
+                app:ccp_arrowSize="@dimen/_12sdp"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_autoFormatNumber="true"
+                app:ccp_contentColor="?android:textColorPrimary"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="true"
+                app:ccp_textGravity="LEFT"
+                app:ccp_textSize="@dimen/small"
+                app:layout_constraintEnd_toStartOf="@+id/shopeadd_phoneedt"
+                app:layout_constraintHorizontal_weight="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shopeadd_phoneedt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/rect_border_grey"
+                android:fontFamily="@font/moderat_regular"
+                android:inputType="number"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shopeadd_ccp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- NAME-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_regular"
+            android:text="Name"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/medium" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/rect_border_grey"
+            android:fontFamily="@font/moderat_regular"
+            android:maxLength="100"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/small" />
+
+
+        <include
+            android:id="@+id/btn"
+            layout="@layout/include_common_btn" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

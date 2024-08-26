@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <CheckBox
+            android:id="@+id/All"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="All"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey" />
+
+        <CheckBox
+            android:id="@+id/Mon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey"
+
+            />
+
+        <CheckBox
+            android:id="@+id/Tue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey" />
+
+        <CheckBox
+            android:id="@+id/Wed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wed"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:weightSum="4">
+
+        <CheckBox
+            android:id="@+id/Thu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey" />
+
+        <CheckBox
+            android:id="@+id/Fri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fri"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey" />
+
+        <CheckBox
+            android:id="@+id/Sat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey" />
+
+        <CheckBox
+            android:id="@+id/Sun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sun"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            app:buttonTint="@color/grey" />
+    </LinearLayout>
+
+
+</LinearLayout>

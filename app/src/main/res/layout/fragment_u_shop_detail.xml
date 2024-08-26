@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_12sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:ignore="MissingConstraints">
+
+        <include
+            android:id="@+id/shopDetail"
+            layout="@layout/user_shop_detail" />
+
+
+
+        <LinearLayout
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/shopDetail">
+
+            <TextView
+                android:id="@+id/shop_overview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_button_blue"
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="center"
+                android:text="@string/overview"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small" />
+
+            <TextView
+                android:id="@+id/shop_service"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/border_button_blue"
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="center"
+                android:text="@string/service"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small" />
+
+            <TextView
+                android:id="@+id/shop_rating"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/border_button_blue"
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="center"
+                android:text="@string/rating"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@+id/header1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/shop_call"
+                    style="@style/button.outline"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:icon="@drawable/call_blue"
+                    app:iconGravity="textStart"
+                    app:iconSize="34dp"
+                    app:iconTint="@color/appDark"
+                    app:shapeAppearanceOverlay="@style/button.Circle"
+                    app:strokeColor="@color/appDark"
+                    app:strokeWidth="@dimen/_1sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/call"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/shop_chat"
+                    style="@style/button.outline"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    app:icon="@drawable/chat"
+                    app:iconGravity="textStart"
+                    app:iconSize="34dp"
+                    app:iconTint="@color/appDark"
+                    app:shapeAppearanceOverlay="@style/button.Circle"
+                    app:strokeColor="@color/appDark"
+                    app:strokeWidth="@dimen/_1sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/chat"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/shop_whatsapp"
+                    style="@style/button.outline"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    app:icon="@drawable/whatsapp"
+                    app:iconGravity="textStart"
+                    app:iconSize="34dp"
+                    app:iconTint="@color/appDark"
+                    app:shapeAppearanceOverlay="@style/button.Circle"
+                    app:strokeColor="@color/appDark"
+                    app:strokeWidth="@dimen/_1sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/whatsapp"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/shop_share"
+                    style="@style/button.outline"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    app:icon="@drawable/share_blue"
+                    app:iconGravity="textStart"
+                    app:iconSize="34dp"
+                    app:iconTint="@color/appDark"
+                    app:shapeAppearanceOverlay="@style/button.Circle"
+                    app:strokeColor="@color/appDark"
+                    app:strokeWidth="@dimen/_1sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/moderat_regular"
+                    android:text="@string/share"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/header_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@+id/header2"
+            tools:ignore="MissingConstraints" />
+
+        <include
+            android:id="@+id/info"
+            layout="@layout/include_shop_detail_overview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/header_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/info">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/moderat_bold"
+                android:gravity="center"
+                android:text="@string/category"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/medium" />
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/include_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@id/category" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

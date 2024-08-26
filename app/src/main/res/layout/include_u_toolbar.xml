@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_login_background"
+    android:minHeight="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:gravity="start|center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/header_appIcon_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <include layout="@layout/include_app_icon_toobar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header_title_back_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/header_back"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:clickable="true"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:src="@drawable/arrow_back"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/header_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/header_back"
+                android:fontFamily="@font/moderat_bold"
+                android:text="@string/app_name"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/header_notification"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/notifications"
+            app:tint="@color/white" />
+
+        <FrameLayout
+
+            android:id="@+id/frameLayout1"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_20sdp">
+
+            <ImageView
+                android:id="@+id/cartbtn"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/shopping_cart"
+                app:tint="@color/white" />
+
+
+            <TextView
+                android:id="@+id/cartbtnBadge"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_gravity="end|top"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/badge_circle_shape"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/_7ssp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/header_image"
+            android:visibility="gone"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@drawable/person"
+            app:civ_border_color="@color/transparnet"
+            app:civ_border_width="1dp" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.common.LoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <!--personal detail-->
+
+
+
+            <!--personal detail header-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Shop Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/grey_border_container"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="Enter Shop Name"
+                android:maxLength="100"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Owner Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/owner_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/grey_border_container"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="Enter Owner Name"
+                android:maxLength="100"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Shop Email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shop_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/grey_border_container"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="Enter Your shop  Email address"
+                android:maxLength="100"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="start"
+                 android:layout_marginTop="@dimen/_15sdp"
+                 android:fontFamily="@font/moderat_regular"
+                 android:text="Phone *"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/_12ssp" />
+
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layphone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/_5sdp">
+
+                 <com.hbb20.CountryCodePicker
+                     android:id="@+id/personalccp"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/edit_text_border"
+                     android:padding="@dimen/_3sdp"
+                     app:ccp_arrowSize="@dimen/_12sdp"
+                     app:ccp_autoDetectCountry="true"
+                     app:ccp_autoFormatNumber="true"
+                     app:ccp_showFullName="false"
+                     app:ccp_showNameCode="false"
+                     app:ccp_showPhoneCode="true"
+                     app:ccp_textGravity="LEFT"
+                     app:ccp_textSize="@dimen/_12ssp"
+                     app:layout_constraintEnd_toStartOf="@+id/phone_number"
+                     app:layout_constraintHorizontal_weight="0.2"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+                 <com.google.android.material.textfield.TextInputEditText
+                     android:id="@+id/phone_number"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="@dimen/_3sdp"
+                     android:background="@drawable/edit_text_border"
+                     android:fontFamily="@font/moderat_regular"
+                     android:hint="Enter Phone Number"
+                     android:inputType="number"
+                     android:maxLength="15"
+                     android:padding="@dimen/_10sdp"
+                     android:singleLine="true"
+                     android:textAlignment="viewStart"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/_12ssp"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_weight="0.5"
+                     app:layout_constraintStart_toEndOf="@+id/personalccp"
+                     app:layout_constraintTop_toTopOf="parent"
+                     tools:ignore="MissingConstraints" />
+
+
+             </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Shop Phone Number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shop_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/grey_border_container"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="Enter Your Shop  Phone Number"
+                android:maxLength="20"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Category"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <com.machine.machine.commonBase.EditSpinner
+                android:id="@+id/edt_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/grey_border_container"
+                android:drawableRight="@drawable/dropdown_icon"
+                android:drawablePadding="5dp"
+                android:editable="false"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="Please select Category"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/grey_border_container"
+                android:drawableRight="@drawable/dropdown_icon"
+                android:drawablePadding="16dp"
+                android:hint="Please Select Category new"
+                android:padding="12dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="@string/add_a_shop_photo_up_to_5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upload_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/uploadBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:backgroundTint="@color/btn_grey"
+                android:fontFamily="@font/moderat_bold"
+                android:text="@string/browse"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="visible"
+                app:cornerRadius="@dimen/_6sdp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Add A location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/grey_border_container"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="Enter Address "
+                android:maxLines="4"
+                android:padding="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/grey">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Working Hours"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hours_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/grey_border_container"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableRight="@drawable/dropdown_icon"
+                    android:drawablePadding="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/moderat_regular"
+                    android:hint="from"
+                    android:maxLength="100"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hours_last"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/grey_border_container"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableRight="@drawable/dropdown_icon"
+                    android:drawablePadding="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/moderat_regular"
+                    android:hint="To"
+                    android:maxLength="100"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/moderat_regular"
+                android:text="Working Days"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <include
+                android:id="@+id/check"
+                layout="@layout/include_hours1" />
+
+            <include
+                android:id="@+id/btn"
+                layout="@layout/include_common_btn" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

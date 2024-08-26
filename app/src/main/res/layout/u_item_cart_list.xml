@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="horizontal"
+    android:padding="@dimen/_5sdp"
+    app:guidelineUseRtl="true">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:scaleType="fitXY"
+        app:riv_corner_radius="@dimen/_6sdp"
+        app:riv_mutate_background="true"
+        app:riv_oval="false"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/moderat_bold"
+            android:gravity="center|start"
+            android:text="name"
+            android:textAlignment="viewStart"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <TextView
+                android:id="@+id/currency_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/moderat_regular"
+                android:gravity="center|start"
+                android:text="price"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_border_black"
+                android:fontFamily="@font/moderat_regular"
+                android:hint="@string/enter_your_bid"
+                android:inputType="numberDecimal"
+                android:maxLength="20"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small"
+                android:visibility="gone"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_5sdp">
+
+                <ImageButton
+                    android:id="@+id/remove"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/remove_circle"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <ProgressBar
+                    android:id="@+id/remove_pb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateTint="@color/appDark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/quantity"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_border_black"
+                android:clickable="false"
+                android:enabled="false"
+                android:fontFamily="@font/moderat_regular"
+                android:inputType="number"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/small"
+                tools:ignore="MissingConstraints" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_5sdp">
+
+                <ImageButton
+                    android:id="@+id/add"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/add_circle"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <ProgressBar
+                    android:id="@+id/add_pb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateTint="@color/appDark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_5sdp">
+
+                <ImageButton
+                    android:id="@+id/delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/delete"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <ProgressBar
+                    android:id="@+id/delete_pb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateTint="@color/appDark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

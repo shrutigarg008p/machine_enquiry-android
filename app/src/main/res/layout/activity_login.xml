@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_16ssp"
+    android:scrollbars="none"
+    tools:context=".ui.common.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.common.LoginActivity">
+
+        <include layout="@layout/include_top_icon" />
+
+        <TextView
+            android:id="@+id/tvAccessToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/moderat_medium"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_regular"
+            android:text="@string/email_phone_number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/moderat_regular"
+            android:maxLength="100"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/moderat_regular"
+            android:text="@string/password"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/laypass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_border"
+                android:fontFamily="@font/moderat_regular"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/show_pass_btn"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:alpha=".8"
+                android:contentDescription="TODO"
+                android:onClick="ShowHidePass"
+                android:padding="5dp"
+                android:src="@drawable/password_visibility_off"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/laypass"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/dark_grey" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <include
+            android:id="@+id/login"
+            layout="@layout/include_common_btn" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/moderat_medium"
+                android:text="@string/forget_password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dont_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/moderat_medium"
+            android:text="@string/dont_have_Account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+        <include
+            android:id="@+id/reg"
+
+            layout="@layout/include_cancel_btn" />
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

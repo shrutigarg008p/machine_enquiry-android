@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/common_btnNav"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:backgroundTint="@color/btnOrange"
+    android:fontFamily="@font/moderat_bold"
+    android:text="Cancel"
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+    android:textSize="@dimen/small"
+    app:cornerRadius="@dimen/_5sdp" />
